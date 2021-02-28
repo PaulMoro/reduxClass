@@ -16,6 +16,14 @@ const reducer = (state, action) => {
         ...state,
         user: action.payload,
       }
+      /* green Aqui llamamos el caso de nuestr accion que fue activada en 
+      el componente, aqui le decimos que va a modeficar, llamando primero a 
+      todo el estado y direccionando el dato que vamos a modificar */
+    case 'LOGOUT_REQUEST':
+      return{
+        ...state,
+        user: action.payload,
+      }
     default: 
       return state;
   }
